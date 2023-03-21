@@ -1,0 +1,54 @@
+[tool.poetry]
+authors = ["likeablob <46628917+likeablob@users.noreply.github.com>"]
+description = ""
+license = "MIT"
+name = "infinite-mucha-esque-scroll"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+rich = "^10.16.0"
+typer = {extras = ["all"], version = "^0.7.0"}
+webuiapi = "==0.6.2"
+
+[tool.poetry.dev-dependencies]
+black = "^23.1.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+poethepoet = "^0.18.1"
+pyproject-flake8 = "^6.0.0"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool.poetry.scripts]
+imes = "infinite_mucha_esque_scroll.cli:app"
+
+[tool.flake8]
+exclude = ".git,__pycache__,docs/source/conf.py,old,build,dist,.venv,.tox"
+extend-ignore = "E203,"
+max-complexity = 10
+max-line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.pyright]
+exclude = [
+  "**/node_modules",
+  "**/__pycache__",
+  "src/experimental",
+  "src/typestubs",
+]
+ignore = []
+include = ["src", "tests"]
+stubPath = "src/stubs"
+
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+executionEnvironments = [
+  {root = "src"},
+  {root = "tests"},
+]

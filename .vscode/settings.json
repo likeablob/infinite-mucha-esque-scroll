@@ -1,0 +1,21 @@
+{
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": ".venv/bin/pflake8",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.languageServer": "Pylance",
+  "isort.args": [],
+  "autoDocstring.docstringFormat": "google-notypes",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "[python]": {
+    "editor.wordBasedSuggestions": true,
+    "editor.formatOnSave": true,
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}
